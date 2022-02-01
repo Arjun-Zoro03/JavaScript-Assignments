@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="restauranthome.css">   
+
+</head>
+<body>
+
+    <ul id="menu"></ul>
+    
+    <script>
+
+        // api url
+        const api_url = "http://localhost:3000/dishes";
+        
+        // Defining async function
+        async function getapi(url) {
+            
+            // Storing response
+            const response = await fetch(url);
+            
+            // Storing data in form of JSON
+            var data = await response.json();
+            console.log(data);
+
+            show(data);
+        }
+        // Calling that async function
+        getapi(api_url);
+        
+
+        // Function to define innerHTML for HTML table
+        function show(menuCard){
+
+            let list = document.getElementById("menu");
+
+
+            for(let i = 0; i < menuCard.length; i++){
+                let li = document.createElement("li");
+                li.setAttribute("id","dish"+i);
+                li.setAttribute("draggable", "true");
+                li.setAttribute("dish", menuCard[i].dish);
+                li.setAttribute("price", menuCard[i].price);
+                li.addEventListener("dragstart",()=>{drag(event)});
+
+
+                let h2 = document.createElement("h2");
+                let txt = document.createTextNode(menuCard[i].dish);
+                h2.appendChild(txt);
+
+                let p = document.createElement("p");
+                txt = document.createTextNode( menuCard[i].price) ;
+                p.appendChild(txt);
+
+                let h6 = document.createElement("h6");
+                h6.setAttribute("class", "invisible");
+                txt = document.createTextNode(menuCard[i].category);
+                h6.appendChild(txt);
+
+                li.appendChild(h2);
+                li.appendChild(p);
+                li.appendChild(h6);
+                list.appendChild(li);
+            }
+        }
+
+
+        
+    </script>
+</body>
+</html>

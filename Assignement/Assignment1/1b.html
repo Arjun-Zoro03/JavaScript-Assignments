@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Arrow function</h2>
+
+    <p>
+        Getting first letters of First and Last Name
+    </p>
+
+    <form onsubmit="callArrowFunction()">
+        First Name: <input type="text" id="fname" name="fname"><br>
+        Last Name: <input type="text" id="lname" name="lname"><br>
+  
+        <input type="submit" value="Calculate"> 
+    </form>
+
+    <script>
+    let arrowFunction = (firstName, lastName) => firstName.charAt(0).concat(lastName.charAt(0));
+
+    function callArrowFunction() {
+        var firstName = document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+        alert(arrowFunction(firstName,lastName));
+    }
+    </script>
+    
+</body>
+</html>

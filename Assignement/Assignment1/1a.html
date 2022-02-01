@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style = "text-align:center;"> 
+          
+    <h1 style = "color:black;"> 
+        Welcome
+    </h1> 
+  
+    <p id="p1"> 
+        Click the button to see how function can be passed as a parameter to another function.
+    </p>             
+      
+    <button onclick = "function1(function2)"> 
+        Click Here 
+    </button>         
+      
+    <script> 
+        function function2(){
+            return 'function2 was given as a paramenter';
+        }
+
+        function function1(func){
+            document.getElementById("p1").innerHTML = func();
+        }         
+    </script> 
+
+</body> 
+
+</html>
+
+
+
+    

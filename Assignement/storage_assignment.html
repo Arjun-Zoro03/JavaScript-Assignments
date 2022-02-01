@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+
+<body>
+    <p><button onclick="sessionCounter()" type="button">Session Counter</button></p>
+    <div id="session"></div>
+
+    <p><button onclick="localCounter()" type="button">Local Counter</button></p>
+    <div id="local"></div>
+
+
+    <script>
+
+        if(sessionStorage.clickcount){
+            document.getElementById("session").innerHTML = "Session Count: " +sessionStorage.clickcount;
+        }else{
+            document.getElementById("session").innerHTML = "Session Count: 0";
+        }
+        document.getElementById("local").innerHTML = "Local Count: " + localStorage.clickcount;
+
+        function sessionCounter() {
+            if (sessionStorage.clickcount) {
+              sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+            } else {
+                sessionStorage.clickcount = 1;
+            }
+            document.getElementById("session").innerHTML = "Session Count: " +sessionStorage.clickcount; 
+        }
+
+        function localCounter() {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("local").innerHTML = "Local Count: " + localStorage.clickcount;
+        } 
+        
+    </script>
+
+</body>
+</html>

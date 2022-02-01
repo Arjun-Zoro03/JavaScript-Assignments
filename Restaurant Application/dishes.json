@@ -1,0 +1,35 @@
+{
+
+    "dishes":[
+        {
+            "dish" : "Chicken Biryani",
+            "price" : "300",
+            "category" : "main course"
+        },
+        {
+            "dish" : "Veg Biryani",
+            "price" : "200",
+            "category" : "main course"
+        },
+        {
+            "dish" : "Pina Colada",
+            "price" : "300",
+            "category" : "beverage"
+        },
+        {
+            "dish" : "Mexican Watermelon Agua Fresca",
+            "price" : "300",
+            "category" : "beverage"
+        },
+        {
+            "dish" : "Meringue Pie",
+            "price" : "150",
+            "category" : "dessert"
+        },
+        {
+            "dish" : "Ricotta Cake",
+            "price" : "150",
+            "category" : "dessert"
+        }   
+    ]
+}

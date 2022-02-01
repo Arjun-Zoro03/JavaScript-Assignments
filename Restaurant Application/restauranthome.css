@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+  }
+
+.flex-container{
+    display: flex;
+}
+
+.column1 {
+    flex: 1;
+}
+
+.column2 {
+    border-left: thick solid black;
+    padding-left: 10px;
+    flex: 3;
+}
+
+#search-table, #search-menu {
+    width: 80%; 
+    font-size: 12px; 
+    padding: 10px 10px 10px 10px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+    margin-left: 30px;
+}
+
+#tables {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+#tables li{
+    width: 95%;     
+    border-style: outset;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: white; 
+    padding: 10px;
+    text-decoration: none; /* Remove default text underline */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+
+  
+#tables li:hover:not(.header) {
+    background-color: #eee; 
+}
+
+
+#menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+#menu li{
+    width: 99%;     
+    border-style: outset;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: white; 
+    padding: 20px;
+    text-decoration: none; /* Remove default text underline */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+    margin-bottom: 10px;
+}
+  
+#menu li:hover:not(.header) {
+    background-color: #eee; 
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 5px;
+}
+
+i {
+    font-size: 100px;
+    cursor: pointer;
+    user-select: none;
+    color: gray;
+}
+  
+i:hover {
+    color: black;
+}
